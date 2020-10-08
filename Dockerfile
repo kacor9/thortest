@@ -22,9 +22,5 @@ EXPOSE 8080
 
 USER 1001
 
-RUN /usr/libexec/s2i/assemble
-
 #RUN echo "extension=ibm_db2.so" >> /etc/php.ini
 #RUN tail /etc/php.ini
-
-CMD /usr/libexec/s2i/run
