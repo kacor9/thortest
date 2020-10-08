@@ -1,4 +1,4 @@
-FROM php-73:latest
+FROM php:7.3-apache
 
 USER root
 
