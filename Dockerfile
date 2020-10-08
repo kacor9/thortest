@@ -25,7 +25,7 @@ RUN pecl install ibm_db2
 
 #RUN cp -f /usr/lib64/php/modules/ibm_db2.so /usr/lib64/php/modules/mysqli.so
 
-RUN cat /usr/local/etc/php.ini
+#RUN cat /usr/local/etc/php.ini
 
 RUN php -i
 
