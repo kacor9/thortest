@@ -18,8 +18,6 @@ RUN chown -R 1001:0 /ibmdriver
 RUN pear config-set php_ini "/etc/php.ini"
 RUN pecl install ibm_db2
 
-RUN cp -f /usr/lib64/php/modules/ibm_db2.so /usr/lib64/php/modules/mysqli.so
-
 EXPOSE 8080
 
 USER 1001
