@@ -17,11 +17,16 @@ ENV LD_LIBRARY_PATH=/ibmdriver/clidriver/lib
 
 RUN chown -R 1001:0 /ibmdriver
 
-RUN pear config-set php_ini "/etc/php.ini"
+RUN yum -y update
+RUN yum -y --skip-broken install php*
+
+RUN pear config-set php_ini "/usr/local/etc/php.ini"
 RUN pecl install ibm_db2
 
-EXPOSE 8080
+#RUN cp -f /usr/lib64/php/modules/ibm_db2.so /usr/lib64/php/modules/mysqli.so
+
+RUN cat /usr/local/etc/php.ini
+
+RUN php -i
 
 USER 1001
-
-#RUN tail /etc/php.ini
