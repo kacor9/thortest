@@ -1,4 +1,4 @@
-FROM ubi8/php-73:latest
+FROM php-73:latest
 
 USER root
 
