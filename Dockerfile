@@ -24,5 +24,4 @@ EXPOSE 8080
 
 USER 1001
 
-#RUN echo "extension=ibm_db2.so" >> /etc/php.ini
 #RUN tail /etc/php.ini
